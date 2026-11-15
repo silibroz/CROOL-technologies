@@ -129,6 +129,14 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
   .site-nav .btn-dark{justify-content:center;margin-top:6px}
 }
 
+.hobbies-strip .pillar img.riku{height:130px;width:auto;max-width:100%;object-fit:contain;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.hobbies-strip .pillar:hover img.riku{transform:translateY(-6px) rotate(-2deg)}
+.why-visual{flex:1 1 300px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.why-visual .why-word{flex:none}
+.riku-wink{width:150px;height:auto}
+.riku-avatar{width:64px;height:64px;border-radius:50%;margin-bottom:8px;border:2px solid rgba(255,255,255,.25)}
+@media (max-width:640px){.hobbies-strip .pillar img.riku{height:100px}.riku-wink{width:120px}}
+
 @media (max-width:820px){
   .pillars{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}
   .pillar:nth-child(3){border-left:none}
@@ -196,10 +204,10 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 <h2 id="personality-title" class="h-display">A little more about me</h2>
 <p class="pers-intro">I’m someone who enjoys exploring ideas, figuring things out and turning possibilities into something real. When I’m not working on websites or exploring new ideas, you’ll probably find me:</p>
 <ul class="pillars hobbies-strip">
-<li class="pillar"><svg aria-hidden="true" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#1D5FD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V21H6z"></path><path d="M6 17h12"></path></svg><span>Experimenting<br>in the kitchen</span></li>
-<li class="pillar"><svg aria-hidden="true" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#1D5FD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m12 7 4 3-1.5 4.5h-5L8 10z"></path><path d="M12 3v4M21 10.5l-5-.5M18 19l-3.5-4.5M6 19l3.5-4.5M3 10.5l5-.5"></path></svg><span>Playing football<br>or badminton</span></li>
-<li class="pillar"><svg aria-hidden="true" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#1D5FD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="4"></rect><path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"></path></svg><span>Spending some<br>time gaming</span></li>
-<li class="pillar"><svg aria-hidden="true" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#1D5FD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"></path></svg><span>Thinking about my<br>next business idea</span></li>
+<li class="pillar"><img class="riku" src="assets/riku-cooking.webp" alt="Riku cooking with a frying pan" loading="lazy"><span>Experimenting<br>in the kitchen</span></li>
+<li class="pillar"><img class="riku" src="assets/riku-sports.webp" alt="Riku holding a football and a badminton racket" loading="lazy"><span>Playing football<br>or badminton</span></li>
+<li class="pillar"><img class="riku" src="assets/riku-gaming.webp" alt="Riku gaming with headphones and a controller" loading="lazy"><span>Spending some<br>time gaming</span></li>
+<li class="pillar"><img class="riku" src="assets/riku-idea.webp" alt="Riku at a tablet with a lightbulb idea" loading="lazy"><span>Thinking about my<br>next business idea</span></li>
 </ul>
 <p class="pers-note">I’m a firm believer that there’s always something new to learn and something interesting to build.</p>
 <p class="big">And somewhere along the way, I found another thing I genuinely love doing: <span class="grad">building websites.</span></p>
@@ -220,7 +228,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 </section>
 
 <section class="why">
-<div class="why-word" aria-hidden="true">C<span>R</span>OOL</div>
+<div class="why-visual"><img class="riku-wink" src="assets/riku-wink.webp" alt="Riku winking" loading="lazy"><div class="why-word" aria-hidden="true">C<span>R</span>OOL</div></div>
 <div class="why-text">
 <p class="eyebrow">WHY CROOL?</p>
 <h2 class="h-display">Here’s a little story behind the name.</h2>
@@ -251,7 +259,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 <p>Every project is an opportunity to learn something new, help someone grow and create something meaningful.</p>
 <p>If you have an idea, a business or simply a vision you’d like to bring online, I’d love to hear about it.</p>
 <p class="cta-strong">Let’s make something happen.</p>
-<p class="cta-sign"><span>Sarkar</span>Supratim Sarkar · Nickname: Riku<br>Founder, Crool Technologies</p>
+<p class="cta-sign"><img class="riku-avatar" src="assets/riku-avatar.webp" alt="Riku mascot" loading="lazy"><span>Sarkar</span>Supratim Sarkar · Nickname: Riku<br>Founder, Crool Technologies</p>
 </div>
 <a href="index.html#book">Book a call</a>
 </section>

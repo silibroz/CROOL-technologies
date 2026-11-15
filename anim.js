@@ -16,7 +16,7 @@
       ['.flow-step, .flow-arrow', ''],
       ['.personality > *:not(ul)', ''], ['.hobbies-strip .pillar', ''],
       ['.journey-img', 'left'], ['.journey-text > *', 'right'],
-      ['.why-word', 'zoom'], ['.why-text > *', ''],
+      ['.why-visual', 'zoom'], ['.why-text > *', ''],
       ['.believe > *:not(.believe-cols)', ''], ['.believe-cols > p', ''],
       ['#contact > *, .cta > *', ''], ['footer', '']
     ];
