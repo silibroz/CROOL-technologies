@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Me – Supratim Sarkar | Crool Technologies</title>
-<meta name="description" content="I'm Supratim Sarkar, aka Sarkar. I recently started building websites, loved it, and now run Crool Technologies as a side hustle helping local businesses get online.">
+<title>About Me – Supratim (Riku) Sarkar | Crool Technologies</title>
+<meta name="description" content="Hey, I'm Supratim Sarkar, but you can call me Riku. An IT professional from Siliguri and the person behind Crool Technologies.">
 <meta property="og:title" content="About Me – Supratim Sarkar | Crool Technologies">
 <meta property="og:description" content="The person behind Crool Technologies: honest, direct and just getting started.">
 <meta property="og:image" content="assets/about-portrait.jpg">
@@ -71,6 +71,39 @@ nav a[aria-current]{box-shadow:inset 0 -2px 0 #1D5FD1}
 
 footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:24px 0 40px;border-top:1px solid #E4E7EC;font-size:14px;color:#475467}
 
+.hero-text p.lead{font-size:20px;color:#0F1B2D}
+.hero-text p + p{margin-top:14px}
+.intro-wide{max-width:860px;margin:0 auto 80px;text-align:center}
+.intro-wide p{margin:0;font-size:18px;line-height:1.75;color:#344054}
+.intro-wide p.big{margin-top:24px;font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3vw,34px);font-weight:600;line-height:1.3;color:#0F1B2D}
+.journey-text p{margin-top:16px}
+.why{display:flex;flex-wrap:wrap;align-items:center;gap:48px;background:#FFFFFF;border:1px solid #E4E7EC;border-radius:24px;padding:48px;margin-bottom:80px}
+.why-word{flex:1 1 300px;text-align:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(72px,10vw,128px);letter-spacing:.04em;color:#D0D5DD;line-height:1}
+.why-word span{color:#1D5FD1}
+.why-text{flex:1.4 1 400px;min-width:0}
+.why-text h2{font-size:clamp(28px,3vw,36px)}
+.why-text p{margin:16px 0 0;font-size:17px;line-height:1.7;color:#344054}
+.why-text .r{color:#1D5FD1;font-size:20px}
+.believe{margin-bottom:80px}
+.believe > p:not(.eyebrow){margin:0 0 28px;max-width:760px;font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,2.6vw,30px);font-weight:600;line-height:1.35}
+.believe .quote{margin-bottom:32px}
+.believe-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.believe-cols p{margin:0;font-size:17px;line-height:1.7;color:#344054}
+.more{margin-bottom:80px}
+.more h2{max-width:760px;font-size:clamp(26px,2.8vw,34px);line-height:1.25}
+.hobbies{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.hobbies li{display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:1px solid #E4E7EC;border-radius:18px;padding:24px;font-size:16px;font-weight:600;line-height:1.4}
+.more .note{margin:28px 0 0;font-size:17px;line-height:1.7;color:#344054;font-style:italic}
+.cta{align-items:flex-end}
+.cta-text{flex:1 1 480px;max-width:680px}
+.cta-text p{margin:0 0 10px;line-height:1.6}
+.cta-text h2{margin-bottom:16px}
+.cta .cta-strong{color:#FFFFFF;font-weight:600;font-size:18px;margin-top:16px}
+.cta .cta-sign{margin-top:20px;font-size:14px;color:#98A2B3}
+.cta .cta-sign span{display:block;font-family:'Mrs Saint Delafield',cursive;font-size:40px;line-height:1.2;color:#FFFFFF}
+@media (max-width:900px){.hobbies{grid-template-columns:repeat(2,minmax(0,1fr))}.believe-cols{grid-template-columns:1fr;gap:16px}.why{padding:32px}}
+@media (max-width:480px){.hobbies{grid-template-columns:1fr}}
+
 @media (max-width:820px){
   .pillars{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}
   .pillar:nth-child(3){border-left:none}
@@ -111,16 +144,18 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 <div class="hero-text">
 <p class="eyebrow">ABOUT ME</p>
 <h1 class="h-display">The Mind Behind<br><span class="grad">Crool Technologies</span></h1>
-<p>I’m Supratim Sarkar, aka Sarkar. I started making websites recently, really enjoyed it, and now I’m turning it into a side hustle — helping local businesses get a website that actually brings them customers.</p>
+<p class="lead">Hey, I’m Supratim Sarkar. But you can call me <strong>Riku</strong>! The person behind Crool Technologies.</p>
+<p>I’m a 33-year-old IT professional from Siliguri, West Bengal, with over 10 years of experience in the IT industry.</p>
+<p>By profession, I’ve spent years around technology. By passion, I’ve always been drawn towards creativity, business and the excitement of building something of my own.</p>
 <div class="sign">
-<div class="sign-script">Sarkar
-<svg aria-hidden="true" width="150" height="20" viewBox="0 0 150 20" fill="none"><path d="M2 16C40 8 95 4 148 6" stroke="#1D5FD1" stroke-width="2.5" stroke-linecap="round"></path></svg>
+<div class="sign-script">Riku
+<svg aria-hidden="true" width="120" height="20" viewBox="0 0 120 20" fill="none"><path d="M2 16C32 8 76 4 118 6" stroke="#1D5FD1" stroke-width="2.5" stroke-linecap="round"></path></svg>
 </div>
-<div class="sign-meta"><strong>SUPRATIM SARKAR</strong><span>FOUNDER, CROOL TECHNOLOGIES</span></div>
+<div class="sign-meta"><strong>SUPRATIM (RIKU) SARKAR</strong><span>FOUNDER, CROOL TECHNOLOGIES</span></div>
 </div>
 </div>
 <div class="hero-img">
-<img src="assets/about-portrait.jpg" alt="Supratim Sarkar looking up at misty mountains">
+<img src="assets/about-portrait.jpg" alt="Supratim (Riku) Sarkar looking up at misty mountains">
 </div>
 </section>
 
@@ -143,28 +178,70 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 </div>
 </section>
 
+<section class="intro-wide">
+<p>I’m someone who enjoys exploring ideas, figuring things out and turning possibilities into something real. Whether it’s cooking something new, playing football or badminton, or getting lost in a video game, I enjoy the process of creating, learning and experimenting.</p>
+<p class="big">And somewhere along the way, I found another thing I genuinely love doing: <span class="grad">building websites.</span></p>
+</section>
+
 <section class="journey">
 <div class="journey-img">
 <img src="assets/about-mountains.jpg" alt="Snow-capped mountains at sunrise above the clouds">
 </div>
 <div class="journey-text">
 <p class="eyebrow">MY JOURNEY</p>
-<h2 class="h-display">From Ideas to<br><em class="grad">Real-World Impact</em></h2>
-<p>It started with curiosity. I built my first few websites recently and found that I genuinely enjoy the whole process — from planning the layout to seeing the site go live.</p>
-<p>Crool Technologies is my side hustle. It’s small and new, and I won’t pretend otherwise. When you work with me, you work directly with me — I’ll keep you updated, give you a clear price, and be upfront about what I can and can’t do.</p>
+<h2 class="h-display">How It All<br><em class="grad">Started</em></h2>
+<p>What started as a hobby — experimenting with website creation and helping a few people bring their ideas online — slowly became something more meaningful.</p>
+<p>I enjoyed taking someone’s idea, understanding what they wanted to achieve and turning it into a digital experience they could proudly call their own.</p>
+<p>That’s when I started thinking: why not turn this passion into something bigger?</p>
+<p><strong style="color:#0F1B2D">And that’s how Crool Technologies came to life.</strong></p>
 </div>
 </section>
 
-<section class="quote" aria-label="My goal">
+<section class="why">
+<div class="why-word" aria-hidden="true">C<span>R</span>OOL</div>
+<div class="why-text">
+<p class="eyebrow">WHY CROOL?</p>
+<h2 class="h-display">Here’s a little story behind the name.</h2>
+<p>Growing up, my friends used to call me “Cool Riku”. Yes, I know, it’s a little funny. But childhood nicknames have a way of sticking around!</p>
+<p>My nickname is Riku, and the letter <strong class="r">R</strong> in Crool comes from that very name.</p>
+<p>It’s a small personal touch that makes Crool more than just a business name. It’s a little piece of me.</p>
+</div>
+</section>
+
+<section class="believe">
+<p class="eyebrow">WHAT I BELIEVE IN</p>
+<p>I don’t believe every business needs an expensive agency or an unrealistic budget to establish itself online.</p>
+<div class="quote">
 <span class="quote-mark" aria-hidden="true">“</span>
-<p>My goal is simple — to make technology and design work for <strong>real people</strong>, <strong>real ideas</strong> and <strong>real dreams</strong>.</p>
+<p>I believe every business deserves a chance to be <strong>seen</strong>, <strong>discovered</strong> and <strong>trusted</strong>.</p>
 <svg class="quote-mountain" aria-hidden="true" width="200" height="64" viewBox="0 0 200 64" fill="none" stroke="#1D3E7A" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M2 62 60 30l18 10 34-36 30 32 14-10 42 36"></path><path d="M112 4l-8 20 10-6 6 12M60 30l6 12"></path></svg>
+</div>
+<div class="believe-cols">
+<p>Today, the world is online. A strong digital presence can help a business build credibility, reach more people and open doors to opportunities that might otherwise remain out of reach.</p>
+<p>That’s the idea behind Crool Technologies. I’m not here to sell complicated packages or charge a fortune for work that doesn’t justify it. I want to understand what you need, offer practical solutions and create something that genuinely adds value to your business.</p>
+</div>
+</section>
+
+<section class="more">
+<p class="eyebrow">A LITTLE MORE ABOUT ME</p>
+<h2 class="h-display">When I’m not working on websites or exploring new ideas, you’ll probably find me:</h2>
+<ul class="hobbies">
+<li><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1D5FD1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V21H6z"></path><path d="M6 17h12"></path></svg>Experimenting in the kitchen.</li>
+<li><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1D5FD1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m12 7 4 3-1.5 4.5h-5L8 10z"></path><path d="M12 3v4M21 10.5l-5-.5M18 19l-3.5-4.5M6 19l3.5-4.5M3 10.5l5-.5"></path></svg>Playing football or badminton.</li>
+<li><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1D5FD1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="4"></rect><path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"></path></svg>Spending some time gaming.</li>
+<li><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1D5FD1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"></path></svg>Thinking about my next business idea.</li>
+</ul>
+<p class="note">I’m a firm believer that there’s always something new to learn and something interesting to build.</p>
 </section>
 
 <section class="cta">
-<div>
-<h2>Have a business that needs a website?</h2>
-<p>Tell me about it — the first consultation is free.</p>
+<div class="cta-text">
+<h2>Let’s Build Something Together</h2>
+<p>Crool Technologies may be a business, but at its heart, it’s a personal journey.</p>
+<p>Every project is an opportunity to learn something new, help someone grow and create something meaningful.</p>
+<p>If you have an idea, a business or simply a vision you’d like to bring online, I’d love to hear about it.</p>
+<p class="cta-strong">Let’s make something happen.</p>
+<p class="cta-sign"><span>— Supratim (Riku) Sarkar</span>Founder, Crool Technologies</p>
 </div>
 <a href="index.html#book">Book a call</a>
 </section>
