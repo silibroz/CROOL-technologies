@@ -9,7 +9,7 @@
 <meta property="og:description" content="Websites and online stores for hotels, shops, cafés and brands. Free first consultation.">
 <meta property="og:image" content="assets/portrait.jpg">
 <meta property="og:type" content="website">
-<link rel="icon" href="assets/logo.jpg">
+<link rel="icon" href="assets/logo-light.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Mrs+Saint+Delafield&display=swap">
@@ -33,14 +33,14 @@ img{max-width:100%}
 
 <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 0">
 <div style="display: flex; align-items: center; gap: 16px">
-<div style="background: #0F1B2D; border-radius: 12px; padding: 6px 12px; display: flex"><img loading="lazy" src="assets/logo.jpg" alt="Crool Technologies" loading="eager" style="height: 44px; width: auto; display: block"></div>
+<a href="index.html" style="display: flex"><img src="assets/logo-light.jpg" alt="Crool Technologies" style="height: 58px; width: auto; display: block"></a>
 <div style="font-size: 12px; letter-spacing: 0.2em; line-height: 1.6; color: #475467">BY SUPRATIM<br>SARKAR</div>
 </div>
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
 <a href="#work" style="color: #0F1B2D; padding: 12px 0">Work</a>
 <a href="#services" style="color: #0F1B2D; padding: 12px 0">Services</a>
 <a href="#process" style="color: #0F1B2D; padding: 12px 0">How it works</a>
-<a href="#about" style="color: #0F1B2D; padding: 12px 0">About</a>
+<a href="about.html" style="color: #0F1B2D; padding: 12px 0">About me</a>
 <a href="#contact" style="background: #111111; color: #FFFFFF; font-weight: 600; border-radius: 10px; padding: 12px 20px">Get a free quote</a>
 </nav>
 </header>
@@ -350,6 +350,7 @@ img{max-width:100%}
   });
   document.querySelectorAll('[data-close-booking]').forEach(function(b){ b.addEventListener('click', function(){ dlg.close(); }); });
   dlg.addEventListener('click', function(e){ if(e.target === dlg) dlg.close(); });
+  if(location.hash === '#book'){ loadCountries(); dlg.showModal(); history.replaceState(null, '', location.pathname); }
 
   function listJoin(a){
     if(a.length < 2) return a.join('');
