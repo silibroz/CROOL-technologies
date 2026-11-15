@@ -22,6 +22,24 @@ a{color:#1D5FD1;text-decoration:none}a:hover{color:#174BA6}
 a[style*="background: #111111"]:hover{background:#333333 !important;color:#FFFFFF !important}
 img{max-width:100%}
 
+.marquee{position:relative;overflow:hidden;margin:0 -32px;padding:8px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 45s linear infinite}
+.marquee:hover .marquee-track,.marquee:focus-within .marquee-track,.marquee.paused .marquee-track{animation-play-state:paused}
+.marquee-group{display:flex;gap:20px;padding-right:20px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.wa-card{margin:0;width:320px;flex:0 0 auto;border-radius:18px;overflow:hidden;background:#ECE5DD;box-shadow:0 8px 24px rgba(15,27,45,.08);border:1px solid #E4E7EC}
+.wa-top{display:flex;align-items:center;gap:10px;background:#075E54;color:#FFF;padding:12px 14px}
+.wa-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#FFF;flex:0 0 auto}
+.wa-name{font-weight:700;font-size:15px}
+.wa-status{font-size:12px;opacity:.85}
+.wa-sample{margin-left:auto;font-size:11px;font-weight:700;background:#FEF0C7;color:#7A2E0E;border-radius:999px;padding:4px 9px;white-space:nowrap}
+.wa-chat{padding:16px 14px 18px;min-height:150px;background-color:#ECE5DD;background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:14px 14px}
+.wa-bubble{margin:0;position:relative;background:#FFF;border-radius:0 12px 12px 12px;padding:10px 12px 22px;font-size:15px;line-height:1.5;color:#111B21;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.wa-bubble::before{content:"";position:absolute;left:-8px;top:0;border-top:10px solid #FFF;border-left:8px solid transparent}
+.wa-time{position:absolute;right:10px;bottom:5px;font-size:11px;color:#667781}
+@media (max-width:768px){.marquee{margin:0 -20px}.wa-card{width:270px}.wa-bubble{font-size:14px}.marquee-track{animation-duration:35s}}
+@media (prefers-reduced-motion:reduce){.marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.marquee-track{animation:none}.marquee-group[aria-hidden]{display:none}}
+
 .site-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0;position:relative}
 .site-nav{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:500}
 .menu-btn{display:none;background:none;border:1px solid #D0D5DD;border-radius:10px;width:46px;height:46px;align-items:center;justify-content:center;color:#0F1B2D;cursor:pointer}
@@ -203,6 +221,54 @@ img{max-width:100%}
 </section>
 
 
+
+<section id="reviews" style="padding: 72px 0; border-top: 1px solid #E4E7EC">
+<p style="margin: 0 0 10px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #1D5FD1">KIND WORDS</p>
+<h2 style="margin: 0 0 12px; font-family: Montserrat, sans-serif; font-size: 40px; line-height: 1.15">What clients say</h2>
+<p style="margin: 0 0 32px; max-width: 620px; font-size: 16px; line-height: 1.6; color: #475467">These are sample reviews for now. Real WhatsApp messages from clients are coming soon.</p>
+<div class="marquee" aria-label="Sample client reviews">
+<div class="marquee-track">
+<div class="marquee-group"><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#1D5FD1">HI</span><div><div class="wa-name">Hermoza India</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">Hi Sarkar! The new website looks great. Customers keep telling us how easy it is to find products and check out on their phones. Thanks for being so patient with all our changes 🙌<span class="wa-time">10:42 am</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#0E9F6E">AS</span><div><div class="wa-name">The Agile Soul</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">Thank you so much for the website! It feels calm and clean, just like my classes. Students can now find my schedule and message me directly. Loved working with you 🙏<span class="wa-time">7:15 pm</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#B54708">SH</span><div><div class="wa-name">Silverwood Hotels</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">The hotel website came out really well. Guests can see the rooms and send booking enquiries easily now. Quick replies every time I asked for a change. Highly recommend! 👍<span class="wa-time">4:08 pm</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#1D5FD1">HI</span><div><div class="wa-name">Hermoza India</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">Hi Sarkar! The new website looks great. Customers keep telling us how easy it is to find products and check out on their phones. Thanks for being so patient with all our changes 🙌<span class="wa-time">10:42 am</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#0E9F6E">AS</span><div><div class="wa-name">The Agile Soul</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">Thank you so much for the website! It feels calm and clean, just like my classes. Students can now find my schedule and message me directly. Loved working with you 🙏<span class="wa-time">7:15 pm</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#B54708">SH</span><div><div class="wa-name">Silverwood Hotels</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">The hotel website came out really well. Guests can see the rooms and send booking enquiries easily now. Quick replies every time I asked for a change. Highly recommend! 👍<span class="wa-time">4:08 pm</span></blockquote></div>
+</figure></div>
+<div class="marquee-group" aria-hidden="true"><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#1D5FD1">HI</span><div><div class="wa-name">Hermoza India</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">Hi Sarkar! The new website looks great. Customers keep telling us how easy it is to find products and check out on their phones. Thanks for being so patient with all our changes 🙌<span class="wa-time">10:42 am</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#0E9F6E">AS</span><div><div class="wa-name">The Agile Soul</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">Thank you so much for the website! It feels calm and clean, just like my classes. Students can now find my schedule and message me directly. Loved working with you 🙏<span class="wa-time">7:15 pm</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#B54708">SH</span><div><div class="wa-name">Silverwood Hotels</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">The hotel website came out really well. Guests can see the rooms and send booking enquiries easily now. Quick replies every time I asked for a change. Highly recommend! 👍<span class="wa-time">4:08 pm</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#1D5FD1">HI</span><div><div class="wa-name">Hermoza India</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">Hi Sarkar! The new website looks great. Customers keep telling us how easy it is to find products and check out on their phones. Thanks for being so patient with all our changes 🙌<span class="wa-time">10:42 am</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#0E9F6E">AS</span><div><div class="wa-name">The Agile Soul</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">Thank you so much for the website! It feels calm and clean, just like my classes. Students can now find my schedule and message me directly. Loved working with you 🙏<span class="wa-time">7:15 pm</span></blockquote></div>
+</figure><figure class="wa-card">
+<div class="wa-top"><span class="wa-av" style="background:#B54708">SH</span><div><div class="wa-name">Silverwood Hotels</div><div class="wa-status">online</div></div><span class="wa-sample">Sample review</span></div>
+<div class="wa-chat"><blockquote class="wa-bubble">The hotel website came out really well. Guests can see the rooms and send booking enquiries easily now. Quick replies every time I asked for a change. Highly recommend! 👍<span class="wa-time">4:08 pm</span></blockquote></div>
+</figure></div>
+</div>
+</div>
+</section>
 
 <section id="contact" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between; padding: 44px; margin-bottom: 48px; border-radius: 24px; background: #0F1B2D; color: #FFFFFF">
 <div style="flex: 1 1 360px">
@@ -461,6 +527,9 @@ img{max-width:100%}
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
   document.addEventListener('click',function(e){ if(!e.target.closest('.site-header')) set(false); });
 })();
+</script>
+<script>
+document.querySelectorAll('.marquee').forEach(function(m){ m.addEventListener('touchstart',function(){ m.classList.toggle('paused'); },{passive:true}); });
 </script>
 </body>
 </html>
