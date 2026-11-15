@@ -8,7 +8,8 @@
 <meta property="og:title" content="About Me – Supratim Sarkar | Crool Technologies">
 <meta property="og:description" content="The person behind Crool Technologies: honest, direct and just getting started.">
 <meta property="og:image" content="assets/about-portrait.jpg">
-<link rel="icon" href="assets/logo-light.jpg">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;600;700&family=Mrs+Saint+Delafield&display=swap">
@@ -25,7 +26,7 @@ img{max-width:100%;display:block}
 
 header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:22px 0}
 .brand{display:flex;align-items:center;gap:22px}
-.brand img{height:62px;width:auto}
+.brand img{height:64px;width:auto}
 .brand-tag{border-left:1px solid #D0D5DD;padding-left:22px;font-size:12px;font-weight:600;letter-spacing:.12em;line-height:1.6}
 nav{display:flex;flex-wrap:wrap;align-items:center;gap:30px;font-size:15px;font-weight:500}
 nav a{color:#0F1B2D;padding:12px 0}
@@ -119,6 +120,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 .menu-btn[aria-expanded="true"] .i-open{display:none}
 .menu-btn[aria-expanded="true"] .i-close{display:block}
 @media (max-width:768px){
+  .site-logo{height:50px !important}
   .menu-btn{display:flex}
   .site-nav{display:none;position:absolute;top:100%;left:0;right:0;z-index:50;flex-direction:column;align-items:stretch;gap:4px;background:#FFF;border:1px solid #E4E7EC;border-radius:16px;padding:12px;box-shadow:0 16px 40px rgba(15,27,45,.12)}
   .site-nav.open{display:flex}
@@ -151,7 +153,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 
 <header class="site-header">
 <a class="brand" href="index.html" aria-label="Crool Technologies home">
-<img src="assets/logo-light.jpg" alt="Crool Technologies">
+<img src="assets/crool-logo.webp" alt="Crool Technologies" class="site-logo" width="507" height="200">
 </a>
 <button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
 <svg class="i-open" aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
