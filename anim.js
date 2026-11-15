@@ -62,8 +62,27 @@
     var t = document.querySelector('.type-text');
     if (t) {
       var words = (t.getAttribute('data-words') || '').split('|').filter(Boolean);
+      var h1 = t.closest('h1');
+      /* Lock the headline to the height of its tallest version so the page never shifts */
+      function lockHeight() {
+        var keep = t.textContent, max = 0;
+        h1.style.minHeight = '0px';
+        words.forEach(function (w) { t.textContent = w; max = Math.max(max, h1.getBoundingClientRect().height); });
+        t.textContent = keep;
+        h1.style.minHeight = Math.ceil(max) + 'px';
+      }
+      var rz; window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(lockHeight, 150); });
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(lockHeight);
+      lockHeight();
+      /* Only type while the headline is on screen */
+      var visible = true, waiting = null;
+      new IntersectionObserver(function (e) {
+        visible = e[0].isIntersecting;
+        if (visible && waiting) { var f = waiting; waiting = null; f(); }
+      }).observe(h1);
       var wi = 0, ci = words[0].length, deleting = true;
       setTimeout(function tick() {
+        if (!visible) { waiting = tick; return; }
         var w = words[wi];
         if (deleting) {
           ci--; t.textContent = w.slice(0, ci);
