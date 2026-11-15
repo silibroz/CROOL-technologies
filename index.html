@@ -35,6 +35,7 @@ img{max-width:100%}
 .flow-num{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#111;color:#FFF;font-family:Montserrat,sans-serif;font-weight:700;font-size:16px}
 .flow-step h3{margin:14px 0 6px;font-size:18px}
 .flow-step p{margin:0;font-size:15px;line-height:1.55;color:#475467}
+.type-h1{min-height:3.2em}
 .flow-arrow{flex:0 0 auto;display:flex;align-items:center;color:#1D5FD1}
 @media (max-width:1024px){
   .svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -50,6 +51,8 @@ img{max-width:100%}
   .site-nav a:not([style*="#111111"]):hover{background:#F2F4F7}
   .site-nav a[style*="#111111"]{text-align:center;margin-top:6px}
   .hero-media{order:-1}
+  .type-h1{min-height:4.3em}
+  .type-wrap{white-space:normal}
   .hero{gap:40px !important;padding-top:16px !important}
   .svc-grid{gap:12px}
   .svc-card{padding:18px;gap:10px}
@@ -70,6 +73,9 @@ img{max-width:100%}
   #contact{padding:28px !important}
 }
 </style>
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js-anim')</script>
+<link rel="stylesheet" href="anim.css">
+<script src="anim.js" defer></script>
 </head>
 <body>
 <div style="font-family: Lato, system-ui, sans-serif; color: #0F1B2D; background: #FAFAF7; min-height: 100vh">
@@ -93,9 +99,10 @@ img{max-width:100%}
 </header>
 
 <section class="hero" style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px; padding: 48px 0 72px">
+<span class="blob b1" data-parallax="-0.25" aria-hidden="true"></span><span class="blob b2" data-parallax="0.2" aria-hidden="true"></span><span class="blob b3" data-parallax="-0.12" aria-hidden="true"></span>
 <div style="flex: 1 1 480px; min-width: 0">
 <p style="display: inline-block; margin: 0 0 20px; font-size: 13px; font-weight: 600; color: #1D5FD1; background: #EAF1FB; border-radius: 999px; padding: 8px 14px">Now booking new website projects</p>
-<h1 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 68px); line-height: 1.05; letter-spacing: -0.02em">Websites that help local businesses get <span style="color: #1D5FD1">more customers</span></h1>
+<h1 class="type-h1" aria-label="Websites that help local businesses get more customers" style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 68px); line-height: 1.05; letter-spacing: -0.02em">Websites that help <span class="type-wrap" aria-hidden="true"><span class="type-text" data-words="local businesses|dental clinics|make-up studios|crochet artists|fitness trainers|online stores">local businesses</span><span class="type-caret"></span></span> get more customers</h1>
 <p style="margin: 22px 0 0; max-width: 540px; font-size: 18px; line-height: 1.6; color: #475467">I design and build websites and online stores for hotels, shops, cafés and brands — simple to use, fast on mobile, and made to bring in calls and bookings.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px">
 <a href="#book" data-open-booking style="background: #111111; color: #FFFFFF; font-weight: 600; border-radius: 10px; padding: 15px 26px">Book a free consultation</a>
@@ -108,7 +115,7 @@ img{max-width:100%}
 </div>
 </div>
 <div class="hero-media" style="flex: 1 1 380px; min-width: 0; display: flex; justify-content: center">
-<div style="position: relative; width: 100%; max-width: 440px">
+<div data-parallax="-0.08" style="position: relative; width: 100%; max-width: 440px">
 <img src="assets/portrait.jpg" alt="Supratim Sarkar" style="width: 100%; height: auto; display: block; border-radius: 24px">
 <div style="position: absolute; left: 12px; bottom: -20px; background: #FFFFFF; border: 1px solid #E4E7EC; border-radius: 16px; padding: 14px 20px; box-shadow: 0 10px 30px rgba(15,27,45,0.10)">
 <div style="font-family: 'Mrs Saint Delafield', cursive; font-size: 44px; line-height: 1; color: #0F1B2D">Sarkar</div>

@@ -52,7 +52,8 @@ nav a[aria-current]{box-shadow:inset 0 -2px 0 #1D5FD1}
 
 .journey{display:flex;flex-wrap:wrap;align-items:center;gap:48px;padding-bottom:64px}
 .journey-img{flex:1 1 380px;min-width:0}
-.journey-img img{width:100%;height:auto;border-radius:20px}
+.journey-img{overflow:hidden;border-radius:20px}
+.journey-img img{width:100%;height:auto;border-radius:20px;scale:1.08}
 .journey-text{flex:1 1 440px;min-width:0}
 .journey-text h2{font-size:clamp(36px,4vw,48px)}
 .journey-text h2 em{font-style:italic}
@@ -141,6 +142,9 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
   .cta{padding:28px}
 }
 </style>
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js-anim')</script>
+<link rel="stylesheet" href="anim.css">
+<script src="anim.js" defer></script>
 </head>
 <body>
 <div class="wrap">
@@ -165,6 +169,8 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 
 <main>
 <section class="hero">
+<span class="blob b1" data-parallax="-0.25" aria-hidden="true"></span><span class="blob b2" data-parallax="0.2" aria-hidden="true"></span><span class="blob b3" data-parallax="-0.12" aria-hidden="true"></span>
+
 <div class="hero-text">
 <p class="eyebrow">ABOUT ME</p>
 <h1 class="h-display">The Mind Behind<br><span class="grad">Crool Technologies</span></h1>
@@ -179,7 +185,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 </div>
 </div>
 <div class="hero-img">
-<img src="assets/about-portrait.jpg" alt="Supratim Sarkar looking up at misty mountains">
+<img data-parallax="-0.08" src="assets/about-portrait.jpg" alt="Supratim Sarkar looking up at misty mountains">
 </div>
 </section>
 
@@ -199,7 +205,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 
 <section class="journey">
 <div class="journey-img">
-<img src="assets/about-mountains.jpg" alt="Mountain landscape near Siliguri at sunrise">
+<img data-parallax="-0.06" src="assets/about-mountains.jpg" alt="Mountain landscape near Siliguri at sunrise">
 </div>
 <div class="journey-text">
 <p class="eyebrow">MY JOURNEY</p>

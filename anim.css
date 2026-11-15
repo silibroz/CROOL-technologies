@@ -1,0 +1,41 @@
+/* Crool animations: scroll reveal, typing headline, parallax depth */
+html,body{overflow-x:clip}
+
+/* 1. Scroll reveal */
+.js-anim [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms);will-change:opacity,transform}
+.js-anim [data-reveal="left"]{transform:translateX(-36px)}
+.js-anim [data-reveal="right"]{transform:translateX(36px)}
+.js-anim [data-reveal="zoom"]{transform:scale(.94)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.js-anim .rw{display:inline-block;opacity:0;transform:translateY(.45em);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.js-anim .words-in .rw{opacity:1;transform:none}
+
+/* 4. Typing headline */
+.type-wrap{white-space:nowrap}
+.type-text{color:#1D5FD1}
+.type-caret{display:inline-block;width:3px;height:.9em;margin-left:4px;background:#1D5FD1;vertical-align:-.08em;border-radius:2px;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{opacity:0}}
+
+/* 5. Parallax depth */
+.hero,.about-hero{position:relative;isolation:isolate}
+.blob{position:absolute;z-index:-1;border-radius:50%;filter:blur(60px);pointer-events:none;will-change:transform}
+.blob.b1{width:380px;height:380px;background:rgba(29,95,209,.16);top:-60px;right:6%}
+.blob.b2{width:300px;height:300px;background:rgba(27,163,214,.14);bottom:-40px;left:-80px}
+.blob.b3{width:220px;height:220px;background:rgba(29,95,209,.10);top:40%;left:42%}
+[data-parallax]{will-change:transform}
+
+/* Hover zoom on portfolio images */
+.work-card{transition:transform .35s ease,box-shadow .35s ease}
+.work-card img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.work-card:hover img{transform:scale(1.07)}
+.work-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,27,45,.12)}
+.svc-card,.flow-step,.hobbies-strip .pillar{transition:transform .3s ease,box-shadow .3s ease}
+.svc-card:hover,.flow-step:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(15,27,45,.08)}
+
+@media (prefers-reduced-motion:reduce){
+  .js-anim [data-reveal],.js-anim .rw{opacity:1 !important;transform:none !important;transition:none !important}
+  [data-parallax],.blob{transform:none !important}
+  .type-caret{animation:none}
+  .work-card,.work-card img,.svc-card,.flow-step{transition:none !important}
+  .work-card:hover img,.work-card:hover,.svc-card:hover,.flow-step:hover{transform:none}
+}
