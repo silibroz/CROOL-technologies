@@ -48,7 +48,9 @@
           n.classList.add('rw'); n.style.setProperty('--d', (i++ * 70) + 'ms');
         }
       });
-      requestAnimationFrame(function () { setTimeout(function () { h.classList.add('words-in'); }, 120); });
+      var showWords = function () { requestAnimationFrame(function () { setTimeout(function () { h.classList.add('words-in'); }, 120); }); };
+      var rc = document.documentElement.classList;
+      if (rc.contains('loading') || rc.contains('loader-active')) window.addEventListener('crool:loaded', showWords, { once: true }); else showWords();
     });
 
     var io = new IntersectionObserver(function (entries) {
